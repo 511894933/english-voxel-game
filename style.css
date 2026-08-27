@@ -1,0 +1,26 @@
+/* 简单样式用于展示体素网格、箱子和模态 */
+:root{
+  --bg:#0b1220;/* 深色背景 */
+  --panel:#0f1724;
+  --accent:#ffd166;
+  --block:#7fb069;
+  --chest:#c77dff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:#e6eef8;}
+header{padding:16px;text-align:center}
+main{display:flex;gap:16px;padding:12px;align-items:flex-start}
+#world-container{background:linear-gradient(180deg,#123,#08121a);padding:10px;border-radius:8px}
+#world{display:grid;grid-template-columns:repeat(10,48px);grid-auto-rows:48px;gap:4px;padding:8px}
+.block{width:48px;height:48px;border-radius:6px;background:linear-gradient(180deg,#8fd38f,#5a9f5a);display:flex;align-items:center;justify-content:center;color:#073;box-shadow:0 4px 0 rgba(0,0,0,0.4) inset}
+.block.ground{background:linear-gradient(180deg,#7fb069,#4f8f4f)}
+.block.chest{background:linear-gradient(180deg,var(--chest),#9a4aa0);cursor:pointer;font-weight:700}
+.block.chest.open{background:linear-gradient(180deg,#f0c,#a85);opacity:0.85}
+#ui-panel{min-width:220px;padding:12px;background:var(--panel);border-radius:8px}
+#modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6)}
+#modal.hidden{display:none}
+#modal-content{background:#0b1220;border:1px solid #223;padding:18px;border-radius:10px;width:320px}
+#modal-input{width:100%;padding:8px;margin-top:8px;margin-bottom:8px;border-radius:6px;border:1px solid #334;background:#08121a;color:#e6eef8}
+#modal-buttons{display:flex;gap:8px}
+button{background:var(--accent);border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+footer{padding:8px;text-align:center;color:#9ab}

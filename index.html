@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>English Voxel Game — Web Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>English Voxel Game — Web Demo</h1>
+    <p>点击箱子（Chest）完成填空或输入单词以获取钥匙并打开出口。</p>
+  </header>
+
+  <main>
+    <section id="world-container">
+      <div id="world"></div>
+    </section>
+
+    <aside id="ui-panel">
+      <div id="inventory">钥匙：<span id="keys">0</span>/3</div>
+      <div id="message">提示：在方块世界中找到并打开所有箱子。</div>
+    </aside>
+  </main>
+
+  <!-- Task Modal -->
+  <div id="modal" class="hidden">
+    <div id="modal-content">
+      <h2 id="modal-title">任务</h2>
+      <p id="modal-prompt"></p>
+      <input id="modal-input" placeholder="在此输入答案" />
+      <div id="modal-buttons">
+        <button id="submit-btn">提交</button>
+        <button id="cancel-btn">取消</button>
+      </div>
+      <p id="modal-feedback"></p>
+    </div>
+  </div>
+
+  <footer>
+    <small>本演示为最小可玩原型（文字输入版）。</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
